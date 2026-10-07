@@ -1,0 +1,14 @@
+---
+description: Secure Tauri and process practices for Easy Downloader
+alwaysApply: true
+---
+
+# Security
+
+- Never expose shell commands to the frontend.
+- Never concatenate untrusted user input into shell command strings.
+- Spawn yt-dlp / FFmpeg with `Command` + argv arrays only.
+- Validate and sanitize all user input in Rust before process or DB work.
+- Use typed interfaces between frontend and Rust; reject invalid payloads.
+- Keep Tauri capabilities minimal; do not enable arbitrary shell or open FS beyond needed scopes.
+- Resolve binary paths from settings or known locations — never from raw user shell fragments.

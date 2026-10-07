@@ -1,0 +1,39 @@
+[[permission]]
+identifier = "allow-analyze-url"
+description = "Allow analyzing media URLs via yt-dlp."
+commands.allow = ["analyze_url"]
+
+[[permission]]
+identifier = "allow-start-download"
+description = "Allow starting a download job."
+commands.allow = ["start_download"]
+
+[[permission]]
+identifier = "allow-cancel-download"
+description = "Allow cancelling an active download."
+commands.allow = ["cancel_download"]
+
+[[permission]]
+identifier = "allow-list-history"
+description = "Allow reading download history."
+commands.allow = ["list_history"]
+
+[[permission]]
+identifier = "allow-get-settings"
+description = "Allow reading app settings."
+commands.allow = ["get_settings"]
+
+[[permission]]
+identifier = "allow-update-settings"
+description = "Allow updating app settings."
+commands.allow = ["update_settings"]
+
+[[permission]]
+identifier = "allow-list-active-downloads"
+description = "Allow listing active download jobs."
+commands.allow = ["list_active_downloads"]
+
+[[permission]]
+identifier = "allow-reveal-in-folder"
+description = "Allow opening the download folder in the system file manager."
+commands.allow = ["reveal_in_folder"]

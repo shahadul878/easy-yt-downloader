@@ -1,0 +1,24 @@
+---
+description: Layer separation for Easy Downloader
+alwaysApply: true
+---
+
+# Architecture
+
+Keep strict separation between layers. Never put business logic in React components.
+
+| Layer | Location | Responsibility |
+|-------|----------|----------------|
+| UI | `src/components`, `src/features` | Presentation and user events only |
+| State | `src/stores` | App state, orchestration, calls to IPC |
+| IPC | `src/lib` | Typed Tauri invoke wrappers |
+| Commands | `src-tauri/src/commands` | Thin IPC handlers; validate then delegate |
+| Engine | `src-tauri/src/engine` | Download orchestration |
+| Database | `src-tauri/src/db` | SQLite access |
+| Media | `src-tauri/src/media` | yt-dlp / FFmpeg process wrappers |
+
+## Rules
+
+- Components call stores or thin hooks — not `invoke` directly for business flows.
+- Commands must not embed download/DB logic; call engine/db/media modules.
+- Share types via serde JSON models and matching TypeScript interfaces in `src/lib/types`.

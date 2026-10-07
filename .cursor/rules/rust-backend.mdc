@@ -1,0 +1,14 @@
+---
+description: Rust Tauri backend conventions for Easy Downloader
+globs: src-tauri/**/*.rs
+alwaysApply: false
+---
+
+# Rust backend
+
+- Commands are thin: validate → call engine/db/media → map errors.
+- Media: `std::process::Command` with separate args; parse `yt-dlp -J` JSON.
+- Engine owns job lifecycle and progress events (`download-progress`, `download-finished`, `download-error`).
+- SQLite via a dedicated `db` module with migrations from day one.
+- Prefer typed `models` with serde; return structured errors to the frontend.
+- Never `shell` out; never build command lines from format! with user URLs.

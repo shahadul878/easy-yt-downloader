@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schema.tauri.app/config/2/capability",
+  "identifier": "default",
+  "description": "Default capability for Easy Downloader",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "dialog:default",
+    "allow-analyze-url",
+    "allow-start-download",
+    "allow-cancel-download",
+    "allow-list-history",
+    "allow-get-settings",
+    "allow-update-settings",
+    "allow-list-active-downloads",
+    "allow-reveal-in-folder"
+  ]
+}

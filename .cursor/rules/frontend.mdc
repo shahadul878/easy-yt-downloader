@@ -1,0 +1,14 @@
+---
+description: React TypeScript Zustand conventions for Easy Downloader
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Frontend
+
+- TypeScript strict mode; prefer clear names and small functions.
+- Reusable components; avoid duplicated logic.
+- No business logic in React components — use Zustand stores and `src/lib`.
+- Validate URLs and form input on the client before invoke; still re-validate in Rust.
+- Use typed IPC wrappers from `src/lib/tauri.ts` — do not call raw `invoke` with magic strings in features.
+- Handle errors explicitly; surface user-facing messages via store/toast state.

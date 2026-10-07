@@ -1,0 +1,31 @@
+---
+description: Easy Downloader product scope and legal-use constraints
+alwaysApply: true
+---
+
+# Product — Easy Downloader
+
+Professional desktop download manager for permitted media only.
+
+## Capabilities
+
+- Analyze supported media URLs
+- Select video and audio formats
+- Download individual items; manage queues
+- Download playlists where permitted
+- View history; manage downloaded files
+
+## Legal use
+
+Only for content the user owns, has permission to download, or is legally permitted to save. Do not add circumvention, DRM bypass, or unauthorized access features.
+
+## Stack
+
+Frontend: React, TypeScript, Vite, Tailwind, shadcn/ui, Zustand  
+Desktop: Tauri 2, Rust  
+Data: SQLite  
+Media: yt-dlp, FFmpeg
+
+## Development
+
+Inspect existing code before large features. Plan, implement incrementally, typecheck, lint, and test. Never rewrite the entire project unless explicitly requested.

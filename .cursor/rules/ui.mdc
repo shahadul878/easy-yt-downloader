@@ -1,0 +1,23 @@
+---
+description: Dark-first premium desktop UI for Easy Downloader
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# UI
+
+Look like premium professional desktop software.
+
+## Do
+
+- Dark-first interface, clean spacing, minimal clutter
+- Subtle borders, rounded cards for interactive containers
+- Clear typography, accessible controls, keyboard-friendly nav
+- Responsive desktop layout (sidebar + main)
+
+## Don't
+
+- Excessive gradients, overly colorful UI, huge empty spaces
+- Generic dashboard templates, excessive animations
+
+Cards only when they contain user interaction. Prefer quiet hierarchy over decoration.
